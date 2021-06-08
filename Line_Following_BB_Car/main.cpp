@@ -22,18 +22,19 @@ int main() {
     // uart.set_baud(9600);
     // xbee.set_baud(9600);
 
+    // int count = 0;
+
     // while(1){
     //     if(uart.readable()){
     //         char recv_uart[1];
     //         uart.read(recv_uart, sizeof(recv_uart));
     //         xbee.write(recv_uart, sizeof(recv_uart));
     //         printf("%c", recv_uart[0]);  // print the data of detected line to screen  
-    //         if(recv_uart[0] == '\n'){
-    //             ThisThread::sleep_for(5s); // Collect 5 seconds more, 
-    //                                        // show that it actually continuously collects data.
+    //         count++;
+    //         if(recv_uart[0] == '\n' && count > 50){
     //             printf("Finish collecting data");
     //             xbee.write("Finish collecting data\n", 24);
-    //             break; // if we receive a whole line, break and call RPC
+    //             break; // if we receive a whole line, break and go calling RPC
     //         }    
     //     }
     // }
